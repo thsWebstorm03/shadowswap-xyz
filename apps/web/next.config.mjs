@@ -100,7 +100,16 @@ const config = {
         ],
       },
       {
-        source: '/images/tokens/:all*',
+        source: '/images/:all*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, immutable, max-age=31536000',
+          },
+        ],
+      },
+      {
+        source: '/images/home/lunar-bunny/:all*',
         headers: [
           {
             key: 'Cache-Control',

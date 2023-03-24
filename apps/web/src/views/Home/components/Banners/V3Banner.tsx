@@ -223,10 +223,10 @@ const V3Banner = () => {
     >
       <S.Inner>
         <S.LeftWrapper>
-          <Title>{t('PancakeSwap V3')}</Title>
-          <StyledSubheading data-text={t('Claim $135K CAKE Airdrop & Exclusive NFT')}>
-            {t('Claim $135K CAKE Airdrop & Exclusive NFT')}
+          <StyledSubheading data-text={t('SVerse Lab')}>
+            {t('SVerse Lab')}
           </StyledSubheading>
+          <Title>{t('Powered by SVerse Lab')}</Title>
           <NextLinkFromReactRouter
             target="_blank"
             to="https://blog.pancakeswap.finance/articles/participate-in-pancake-swap-v3-launch-claim-135-k-cake-airdrop-and-receive-an-exclusive-nft-for-early-supporters"
@@ -234,7 +234,7 @@ const V3Banner = () => {
           >
             <StyledButtonLeft scale={isMobile ? 'sm' : 'md'}>
               <Text bold fontSize="16px" mr="4px" color="invertedContrast">
-                {isMobile ? t('Learn More') : t('Learn More')}
+                {isMobile ? t('Apply Now') : t('Apply Now')}
               </Text>
               <OpenNewIcon color="invertedContrast" />
             </StyledButtonLeft>

@@ -55,15 +55,16 @@ const TopRightImgWrapper = styled(Flex)`
 `
 
 const PredictionCardData: IconCardData = {
-  icon: <PredictionsIcon width="36px" color="inverseContrast" />,
-  background: 'linear-gradient(180deg, #ffb237 0%, #ffcd51 51.17%, #ffe76a 100%);',
+  icon: <PredictionsIcon width="60px" color="inverseContrast" />,
+  background: ' linear-gradient(106.8deg, rgb(117, 255, 220) 6%, rgb(163, 216, 255) 47.6%, rgb(248, 215, 251) 87.8%);',
   borderColor: '#ffb237',
   rotation: '-2.36deg',
 }
 
 const LotteryCardData: IconCardData = {
-  icon: <TicketFillIcon color="white" width="36px" />,
-  background: ' linear-gradient(180deg, #7645D9 0%, #5121B1 100%);',
+  icon: <TicketFillIcon color="white" width="60px" />,
+  background:
+    ' radial-gradient(263px at 100.2% 3%, rgb(12, 85, 141) 31.1%, rgb(205, 181, 93) 36.4%, rgb(244, 102, 90) 50.9%, rgb(199, 206, 187) 60.7%, rgb(249, 140, 69) 72.5%, rgb(12, 73, 116) 72.6%);',
   borderColor: '#3C1786',
   rotation: '1.43deg',
 }
@@ -105,7 +106,7 @@ const WinSection = () => {
       </BgWrapper>
       <TransparentFrame isDark={theme.isDark}>
         <Flex flexDirection="column" alignItems="center" justifyContent="center">
-          <ColoredWordHeading textAlign="center" text={t('Win millions in prizes')} />
+          <ColoredWordHeading textAlign="center" text={t('All Products Revolves Around Shadow Token & Core in the Shadow Ecosystem')} />
           <Text color="textSubtle">{t('Provably fair, on-chain games.')}</Text>
           <Text mb="40px" color="textSubtle">
             {t('Win big with PancakeSwap.')}

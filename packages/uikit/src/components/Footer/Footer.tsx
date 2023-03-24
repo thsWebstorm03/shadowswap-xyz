@@ -77,7 +77,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
             </StyledList>
           ))}
           <Box display={["none", null, "block"]}>
-            <LogoWithTextIcon width="160px" />
+          <img src="/images/LogoWithTextIcon_dark.png" alt="Shadowswap" className="desktop-icon" width="130px" />
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
@@ -110,6 +110,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
               target="_blank"
               scale="sm"
               endIcon={<ArrowForwardIcon color="backgroundAlt" />}
+              style={{color:"#FFFFFF"}}
             >
               {buyCakeLabel}
             </Button>

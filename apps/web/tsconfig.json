@@ -1,7 +1,7 @@
 {
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "baseUrl": "src",
     "strictNullChecks": false,
     "noImplicitAny": false,
@@ -9,6 +9,12 @@
     "downlevelIteration": true,
     "target": "es5"
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "./src/**/*.ts", "./src/**/*.tsx"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
 }
