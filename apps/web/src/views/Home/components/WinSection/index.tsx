@@ -97,12 +97,7 @@ const WinSection = () => {
   return (
     <>
       <BgWrapper>
-        <BottomLeftImgWrapper>
-          <CompositeImage {...bottomLeftImage} />
-        </BottomLeftImgWrapper>
-        <TopRightImgWrapper>
-          <CompositeImage {...topRightImage} />
-        </TopRightImgWrapper>
+        
       </BgWrapper>
       <TransparentFrame isDark={theme.isDark}>
         <Flex flexDirection="column" alignItems="center" justifyContent="center">

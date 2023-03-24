@@ -127,7 +127,7 @@ const Hero = () => {
         id="homepage-hero"
       >
         <Flex flex="1" flexDirection="column">
-          <Heading scale="xxl" color="#FFFF00" mb="24px">
+          <Heading scale="xxl" color="secondary" mb="24px">
             {t('#1 Dex on Core Chain From the Shadows.')}
           </Heading>
           <Heading scale="md" mb="24px">
