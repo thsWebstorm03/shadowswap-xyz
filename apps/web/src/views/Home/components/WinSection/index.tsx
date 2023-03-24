@@ -9,7 +9,7 @@ import LotteryCardContent from './LotteryCardContent'
 import CompositeImage from '../CompositeImage'
 
 const TransparentFrame = styled.div<{ isDark: boolean }>`
-  background: ${({ theme }) => (theme.isDark ? 'rgba(8, 6, 11, 0.6)' : ' rgba(255, 255, 255, 0.6)')};
+  background: ${({ theme }) => (theme.isDark ? 'rgba(8, 6, 11, 0.6)' : ' rgba(0,0,0,1)')};
   padding: 16px;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   box-sizing: border-box;
