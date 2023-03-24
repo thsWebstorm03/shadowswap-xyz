@@ -70,7 +70,7 @@ export const Menu = ({ children }: { children: ReactNode }) => {
       rightSide={
         <>
           <SettingsButton mr="8px" />
-          <NetworkSwitcher />
+          {/* <NetworkSwitcher /> */}
           <UserMenu />
         </>
       }
