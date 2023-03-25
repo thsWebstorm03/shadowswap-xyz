@@ -26,6 +26,7 @@ export const getTokenAddress = (tokenAddress: undefined | string) => {
     return ''
   }
   const lowerCaseAddress = tokenAddress.toLowerCase()
+  console.log(lowerCaseAddress, 'lower')
   if (lowerCaseAddress === 'bnb') {
     return BNB_ADDRESS
   }
