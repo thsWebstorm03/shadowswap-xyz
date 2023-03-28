@@ -47,10 +47,10 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
         <Flex justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
           <Flex flex="1" flexDirection="column" mr={['8px', 0]}>
             <Heading as="h1" scale="xxl" color="secondary" mb="24px">
-              {t('Syrup Pools')}
+              {t('Shadow Pools')}
             </Heading>
             <Heading scale="md" color="text">
-              {t('Just stake some tokens to earn.')}
+              {t('Stake some tokens to earn SHDW and Ecosystem tokens.')}
             </Heading>
             <Heading scale="md" color="text">
               {t('High APR, low risk.')}
@@ -137,7 +137,7 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
               <Image
                 mx="auto"
                 mt="12px"
-                src="/images/decorations/3d-syrup-bunnies.png"
+                src="/images/decorations/3d-shadowpool.png"
                 alt="Pancake illustration"
                 width={192}
                 height={184.5}
