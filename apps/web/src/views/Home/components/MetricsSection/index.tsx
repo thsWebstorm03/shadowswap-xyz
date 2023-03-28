@@ -1,11 +1,11 @@
-import { Heading, Flex, Text, Skeleton, ChartIcon, CommunityIcon, SwapIcon } from '@pancakeswap/uikit'
+import { Heading, Flex, Text } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import { formatLocalisedCompactNumber } from '@pancakeswap/utils/formatBalance'
 import useSWRImmutable from 'swr/immutable'
 import IconCard, { IconCardData } from '../IconCard'
 import StatCardContent from './StatCardContent'
-import GradientLogo from '../GradientLogoSvg'
+// import GradientLogo from '../GradientLogoSvg'
 
 const Stats = () => {
   const { t } = useTranslation()
@@ -18,24 +18,24 @@ const Stats = () => {
   const users = formatLocalisedCompactNumber(addressCount)
   const tvlString = tvl ? formatLocalisedCompactNumber(tvl) : '-'
 
-  const tvlText = t('And those users are now entrusting the platform with over $%tvl% in funds.', { tvl: tvlString })
-  const [entrusting, inFunds] = tvlText.split(tvlString)
+  // const tvlText = t('And those users are now entrusting the platform with over $%tvl% in funds.', { tvl: tvlString })
+  // const [entrusting, inFunds] = tvlText.split(tvlString)
 
   const UsersCardData: IconCardData = {
-    icon: <img src="/images/community2.png" alt="Shadowswap" className="Shadow-road" width="36px"  />,
+    icon: <img src="/images/community2.png" alt="Shadowswap" className="Shadow-road" width="36px" />,
   }
 
   const TradesCardData: IconCardData = {
-    icon: <img src="/images/trade.png" alt="Shadowswap" className="Shadow-road" width="36px"  />,
+    icon: <img src="/images/trade.png" alt="Shadowswap" className="Shadow-road" width="36px" />,
   }
 
   const StakedCardData: IconCardData = {
-    icon: <img src="/images/staked.png" alt="Shadowswap" className="Shadow-road" width="36px"  />,
+    icon: <img src="/images/staked.png" alt="Shadowswap" className="Shadow-road" width="36px" />,
   }
 
   return (
     <Flex justifyContent="center" alignItems="center" flexDirection="column">
-      <img src="/images/shadowhome.png" alt="Shadowswap" className="Shadow-road"height="68px" width="68px"  />
+      <img src="/images/shadowhome.png" alt="Shadowswap" className="Shadow-road" height="68px" width="68px" />
       <Heading textAlign="center" scale="xl">
         {t('Built on Core Solid Foundation')}
       </Heading>
@@ -55,14 +55,14 @@ const Stats = () => {
           <StatCardContent
             headingText={t('%users% users', { users })}
             bodyText={t('in the last 30 days')}
-            highlightColor={'#FFFF00'}
+            highlightColor="#FFFF00"
           />
         </IconCard>
         <IconCard {...TradesCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
           <StatCardContent
             headingText={t('%trades% trades', { trades })}
             bodyText={t('made in the last 30 days')}
-            highlightColor={"#9370db"}
+            highlightColor="#9370db"
           />
         </IconCard>
         <IconCard {...StakedCardData}>

@@ -1,7 +1,7 @@
 import { Flex, Text, Button, ArrowForwardIcon } from '@pancakeswap/uikit'
-import { NextLinkFromReactRouter } from './NextLink'
 import { useTranslation } from '@pancakeswap/localization'
 import styled from 'styled-components'
+import { NextLinkFromReactRouter } from './NextLink'
 
 const StyledLink = styled(NextLinkFromReactRouter)`
   width: 100%;
