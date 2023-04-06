@@ -31,7 +31,7 @@ const StyledNav = styled.nav`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: #2a2448;
-  border-bottom: 1px solid b8add2;
+  border-bottom: 1px solid #9d00ff;
   transform: translate3d(0, 0, 0);
 
   padding-left: 16px;
