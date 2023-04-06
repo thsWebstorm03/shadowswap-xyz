@@ -172,7 +172,7 @@ const IfoSteps: React.FC<React.PropsWithChildren<TypeProps>> = ({
   const { address: account } = useAccount()
   const { t } = useTranslation()
   const { balance } = useTokenBalance(ifoCurrencyAddress)
-  const stepsValidationStatus = [hasActiveProfile, balance.isGreaterThan(0), isCommitted, hasClaimed]
+  const stepsValidationStatus = [hasActiveProfile, balance.isGreaterThan(0), isCommitted]
 
   const getStatusProp = (index: number): StepStatus => {
     const arePreviousValid = index === 0 ? true : every(stepsValidationStatus.slice(0, index), Boolean)
