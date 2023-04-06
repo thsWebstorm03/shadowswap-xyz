@@ -23,10 +23,10 @@ const Hero = () => {
               {t('Voting')}
             </Heading>
             <Heading as="h3" scale="lg" mb="16px">
-              {t('Have your say in the future of the PancakeSwap Ecosystem')}
+              {t('Have your say in the future of the ShadowSwap Ecosystem')}
             </Heading>
             <Link href="/voting/proposal/create" passHref prefetch={false}>
-              <Button startIcon={<ProposalIcon color="currentColor" width="24px" />}>{t('Make a Proposal')}</Button>
+              <Button style={{color:"#FFFFFF"}} startIcon={<ProposalIcon color="currentColor" width="24px" />}>{t('Make a Proposal')}</Button>
             </Link>
           </Box>
           <DesktopImage src="/images/voting/voting-presents.png" width={361} height={214} />

@@ -32,7 +32,7 @@ const Footer = () => {
             </Text>
 
             <Link href="/voting/proposal/create" passHref prefetch={false}>
-              <Button startIcon={<ProposalIcon color="currentColor" width="24px" />}>{t('Make a Proposal')}</Button>
+              <Button style={{color : "#FFFFFF"}} startIcon={<ProposalIcon color="currentColor" width="24px" />}>{t('Make a Proposal')}</Button>
             </Link>
           </Box>
           <DesktopImage src="/images/voting/voting-bunny.png" width={173} height={234} />
