@@ -90,12 +90,12 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
     <CardBody>
       {tooltipVisible && tooltip}
       <Heading as="h4" color="secondary" mb="16px">
-        {t('Lock CAKE in the CAKE pool')}
+        {t('Lock SHDW in the SHDW pool')}
       </Heading>
       <Box>
         <Text mb="4px" color="textSubtle" small>
           {t(
-            'The maximum amount of CAKE you can commit to the Public Sale equals the number of your iCAKE. Lock more CAKE for longer durations to increase the maximum CAKE you can commit to the sale.',
+            'The maximum amount of CORE you can commit to the Public Sale equals the number of your iSHDW. Lock more SHDW for longer durations to increase the maximum WCORE you can commit to the sale.',
           )}
         </Text>
         <TooltipText as="span" fontWeight={700} ref={targetRef} color="textSubtle" small>
@@ -103,7 +103,7 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
         </TooltipText>
         <Text mt="4px" color="textSubtle" small>
           {t(
-            'Missed this IFO? You will enjoy the same amount of iCAKE for future IFOs if your locked-staking position is not unlocked.',
+            'Missed this IFO? You will enjoy the same amount of iSHDW for future IFOs if your locked-staking position is not unlocked.',
           )}
         </Text>
       </Box>
@@ -145,11 +145,11 @@ const Step2 = ({ hasProfile, isLive, isCommitted }: { hasProfile: boolean; isLiv
   return (
     <CardBody>
       <Heading as="h4" color="secondary" mb="16px">
-        {t('Commit CAKE')}
+        {t('Commit WCORE')}
       </Heading>
       <Text color="textSubtle" small>
         {t(
-          'Please note that CAKE in the fixed-term staking positions will remain locked and can not be used for committing to IFO sales. You will need a separate amount of CAKE in your wallet balance to commit to the IFO sales.',
+          'Please note that SHDW in the fixed-term staking positions will remain locked and can not be used for committing to IFO sales. You will need a separate amount of WCORE in your wallet balance to commit to the IFO sales.',
         )}{' '}
         <br />
       </Text>
@@ -203,7 +203,7 @@ const IfoSteps: React.FC<React.PropsWithChildren<TypeProps>> = ({
 
       return (
         <Button as={RouterLink} to={`/profile/${account.toLowerCase()}`}>
-          {t('Activate your Profile')}
+          {t('Convert CORE to WCORE')}
         </Button>
       )
     }
@@ -213,10 +213,10 @@ const IfoSteps: React.FC<React.PropsWithChildren<TypeProps>> = ({
         return (
           <CardBody>
             <Heading as="h4" color="secondary" mb="16px">
-              {t('Activate your Profile')}
+              {t('Convert CORE to WCORE')}
             </Heading>
             <Text color="textSubtle" small mb="16px">
-              {t('You’ll need an active PancakeSwap Profile to take part in an IFO!')}
+              {t('You’ll need WCORE to take part in this IFO!, Swap CORE to WCORE on the swap page.')}
             </Text>
             {renderAccountStatus()}
           </CardBody>

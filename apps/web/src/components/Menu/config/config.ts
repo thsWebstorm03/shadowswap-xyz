@@ -163,7 +163,7 @@ const config: (
           label: t('IFO'),
           href: '/ifo',
           supportChainIds: SUPPORT_ONLY_BSC,
-          image: '/images/ifos/ifo-bunny.png',
+          image: '/images/ifos/Shadowswap_V3.gif',
         },
         {
           label: t('Voting'),

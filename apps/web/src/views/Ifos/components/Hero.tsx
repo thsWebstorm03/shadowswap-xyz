@@ -4,10 +4,11 @@ import { Box, Button, Container, Flex, Heading, Text, useMatchBreakpoints } from
 import { useRouter } from 'next/router'
 
 const StyledHero = styled(Box)`
-  background-image: url('/images/ifos/assets/ifo-banner-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.png');
-  background-position: top, center;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-image: url('/images/ifos/assets/ifos-banner-wave.png');
+  background-size: cover;
+  background-position: center;
+  background-width: 100%;
+  background-height: 100vh;
 `
 
 const StyledHeading = styled(Heading)`
@@ -71,7 +72,7 @@ const Hero = () => {
                 {t('IFO: Initial Farm Offerings')}
               </StyledHeading>
               <StyledSubTitle bold>
-                {t('Buy new tokens launching on BNB Smart Chain')}
+                {t('Buy new tokens launching on Core Chain')}
                 {isMobile && <StyledButton onClick={handleClick}>{t('How does it work?')}</StyledButton>}
               </StyledSubTitle>
             </Box>
