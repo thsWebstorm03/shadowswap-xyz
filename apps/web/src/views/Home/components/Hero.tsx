@@ -7,8 +7,8 @@ import { ChainId } from '@pancakeswap/sdk'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import styled, { keyframes } from 'styled-components'
 import bunnyImage from '../../../../public/images/home/lunar-bunny/shadow@2x.png'
-import CompositeImage, { CompositeImageProps } from './CompositeImage'
-import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
+// import { CompositeImageProps } from './CompositeImage'
+import { SlideSvgDark } from './SlideSvg'
 
 const flyingAnim = () => keyframes`
   from {
@@ -22,17 +22,17 @@ const flyingAnim = () => keyframes`
   }
 `
 
-const fading = () => keyframes`
-  from {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 0.9;
-  }
-`
+// const fading = () => keyframes`
+//   from {
+//     opacity: 0.9;
+//   }
+//   50% {
+//     opacity: 0.1;
+//   }
+//   to {
+//     opacity: 0.9;
+//   }
+// `
 
 const BgWrapper = styled.div`
   z-index: -1;
@@ -59,35 +59,35 @@ const BunnyWrapper = styled.div`
   }
 `
 
-const StarsWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
+// const StarsWrapper = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
 
-  & :nth-child(2) {
-    animation: ${fading} 2s ease-in-out infinite;
-    animation-delay: 1s;
-  }
+//   & :nth-child(2) {
+//     animation: ${fading} 2s ease-in-out infinite;
+//     animation-delay: 1s;
+//   }
 
-  & :nth-child(3) {
-    animation: ${fading} 5s ease-in-out infinite;
-    animation-delay: 0.66s;
-  }
+//   & :nth-child(3) {
+//     animation: ${fading} 5s ease-in-out infinite;
+//     animation-delay: 0.66s;
+//   }
 
-  & :nth-child(4) {
-    animation: ${fading} 2.5s ease-in-out infinite;
-    animation-delay: 0.33s;
-  }
-`
+//   & :nth-child(4) {
+//     animation: ${fading} 2.5s ease-in-out infinite;
+//     animation-delay: 0.33s;
+//   }
+// `
 
-const starsImage: CompositeImageProps = {
-  path: '/images/home/lunar-bunny/',
-  attributes: [
-    { src: 'star-l', alt: '3D Star' },
-    { src: 'star-r', alt: '3D Star' },
-    { src: 'star-top-r', alt: '3D Star' },
-  ],
-}
+// const starsImage: CompositeImageProps = {
+//   path: '/images/home/lunar-bunny/',
+//   attributes: [
+//     { src: 'star-l', alt: '3D Star' },
+//     { src: 'star-r', alt: '3D Star' },
+//     { src: 'star-top-r', alt: '3D Star' },
+//   ],
+// }
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -115,7 +115,6 @@ const Hero = () => {
       <BgWrapper>
         <InnerWrapper>
           <SlideSvgDark className="slide-svg-dark" width="100%" />
-          
         </InnerWrapper>
       </BgWrapper>
       <Flex
@@ -131,7 +130,9 @@ const Hero = () => {
             {t('#1 Dex on Core Chain From the Shadows.')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('ShadowSwap is a one-stop decentralized trading protocol which utilizes the security, scalability, and decentralization of the Core blockchain, creating an open and safe marketplace for traders, liquidity providers, and developers.')}
+            {t(
+              'ShadowSwap is a one-stop decentralized trading protocol which utilizes the security, scalability, and decentralization of the Core blockchain, creating an open and safe marketplace for traders, liquidity providers, and developers.',
+            )}
           </Heading>
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}

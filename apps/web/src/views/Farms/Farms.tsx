@@ -164,6 +164,7 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
   const query = normalizedUrlSearch && !_query ? normalizedUrlSearch : _query
 
   const [viewMode, setViewMode] = useUserFarmsViewMode()
+  const [boosterAvailable, setBoosterAvailable] = useState(false)
   const { address: account } = useAccount()
   const [sortOption, setSortOption] = useState('hot')
   const { observerRef, isIntersecting } = useIntersectionObserver()
@@ -350,29 +351,16 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
 
   return (
     <FarmsContext.Provider value={providerValue}>
-      <PageHeader>
+      <PageHeader >
         <FarmFlexWrapper justifyContent="space-between">
           <Box>
             <FarmH1 as="h1" scale="xxl" color="secondary" mb="24px">
-              {t('Farms')}
+              {t('Shadow Farms')}
             </FarmH1>
             <FarmH2 scale="lg" color="text">
               {t('Stake LP tokens to earn.')}
             </FarmH2>
-            <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
-              <Button p="0" variant="text">
-                <Text color="primary" bold fontSize="16px" mr="4px">
-                  {t('Community Auctions')}
-                </Text>
-                <ArrowForwardIcon color="primary" />
-              </Button>
-            </NextLinkFromReactRouter>
           </Box>
-          {chainId === ChainId.BSC && (
-            <Box>
-              <BCakeBoosterCard />
-            </Box>
-          )}
         </FarmFlexWrapper>
       </PageHeader>
       <Page>
@@ -381,16 +369,8 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
             <Flex mt="20px">
               <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={setViewMode} />
             </Flex>
-            <FarmUI.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
+            
             <Flex mt="20px" ml="16px">
-              <FarmTypesFilter
-                boostedOnly={boostedOnly}
-                handleSetBoostedOnly={setBoostedOnly}
-                stableSwapOnly={stableSwapOnly}
-                handleSetStableSwapOnly={setStableSwapOnly}
-                farmTypesEnableCount={farmTypesEnableCount}
-                handleSetFarmTypesEnableCount={setFarmTypesEnableCount}
-              />
               <ToggleWrapper>
                 <Toggle
                   id="staked-only-farms"
@@ -400,7 +380,26 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
                 />
                 <Text> {t('Staked only')}</Text>
               </ToggleWrapper>
+              <ToggleWrapper>
+                <Toggle
+                  id="booster-available"
+                  checked={boosterAvailable}
+                  onChange={() => setBoosterAvailable(!boosterAvailable)}
+                  scale="sm"
+                />
+                <Text> {t('Booster Available')}</Text>
+              </ToggleWrapper>
+              {/* <FarmTypesFilter
+                boostedOnly={boostedOnly}
+                handleSetBoostedOnly={setBoostedOnly}
+                stableSwapOnly={stableSwapOnly}
+                handleSetStableSwapOnly={setStableSwapOnly}
+                farmTypesEnableCount={farmTypesEnableCount}
+                handleSetFarmTypesEnableCount={setFarmTypesEnableCount}
+              /> */}
+              
             </Flex>
+            <FarmUI.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
           </ViewControls>
           <FilterContainer>
             <LabelWrapper>
@@ -479,7 +478,7 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
           </Flex>
         )}
         {poolLength && <div ref={observerRef} />}
-        <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} />
+        <StyledImage src="/images/decorations/plant3d.png" alt="Pancake illustration" width={120} height={103} />
       </Page>
     </FarmsContext.Provider>
   )

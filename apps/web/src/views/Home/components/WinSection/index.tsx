@@ -6,7 +6,7 @@ import ColoredWordHeading from '../ColoredWordHeading'
 import IconCard, { IconCardData } from '../IconCard'
 import PredictionCardContent from './PredictionCardContent'
 import LotteryCardContent from './LotteryCardContent'
-import CompositeImage from '../CompositeImage'
+// import CompositeImage from '../CompositeImage'
 
 const TransparentFrame = styled.div<{ isDark: boolean }>`
   background: ${({ theme }) => (theme.isDark ? 'rgba(8, 6, 11, 0.6)' : ' rgba(0,0,0,1)')};
@@ -31,28 +31,28 @@ const BgWrapper = styled.div`
   left: 0px;
 `
 
-const BottomLeftImgWrapper = styled(Flex)`
-  position: absolute;
-  left: 0;
-  bottom: -64px;
-  max-width: 192px;
+// const BottomLeftImgWrapper = styled(Flex)`
+//   position: absolute;
+//   left: 0;
+//   bottom: -64px;
+//   max-width: 192px;
 
-  ${({ theme }) => theme.mediaQueries.md} {
-    max-width: 100%;
-  }
-`
+//   ${({ theme }) => theme.mediaQueries.md} {
+//     max-width: 100%;
+//   }
+// `
 
-const TopRightImgWrapper = styled(Flex)`
-  position: absolute;
-  right: 0;
-  top: -64px;
+// const TopRightImgWrapper = styled(Flex)`
+//   position: absolute;
+//   right: 0;
+//   top: -64px;
 
-  max-width: 192px;
+//   max-width: 192px;
 
-  ${({ theme }) => theme.mediaQueries.md} {
-    max-width: 100%;
-  }
-`
+//   ${({ theme }) => theme.mediaQueries.md} {
+//     max-width: 100%;
+//   }
+// `
 
 const PredictionCardData: IconCardData = {
   icon: <PredictionsIcon width="60px" color="inverseContrast" />,
@@ -69,26 +69,26 @@ const LotteryCardData: IconCardData = {
   rotation: '1.43deg',
 }
 
-const bottomLeftImage = {
-  path: '/images/home/prediction-cards/',
-  attributes: [
-    { src: 'bottom-left', alt: 'CAKE card' },
-    { src: 'green', alt: 'Green CAKE card with up arrow' },
-    { src: 'red', alt: 'Red Cake card with down arrow' },
-    { src: 'top-right', alt: 'CAKE card' },
-  ],
-}
+// const bottomLeftImage = {
+//   path: '/images/home/prediction-cards/',
+//   attributes: [
+//     { src: 'bottom-left', alt: 'CAKE card' },
+//     { src: 'green', alt: 'Green CAKE card with up arrow' },
+//     { src: 'red', alt: 'Red Cake card with down arrow' },
+//     { src: 'top-right', alt: 'CAKE card' },
+//   ],
+// }
 
-const topRightImage = {
-  path: '/images/home/lottery-balls/',
-  attributes: [
-    { src: '2', alt: 'Lottery ball number 2' },
-    { src: '4', alt: 'Lottery ball number 4' },
-    { src: '6', alt: 'Lottery ball number 6' },
-    { src: '7', alt: 'Lottery ball number 7' },
-    { src: '9', alt: 'Lottery ball number 9' },
-  ],
-}
+// const topRightImage = {
+//   path: '/images/home/lottery-balls/',
+//   attributes: [
+//     { src: '2', alt: 'Lottery ball number 2' },
+//     { src: '4', alt: 'Lottery ball number 4' },
+//     { src: '6', alt: 'Lottery ball number 6' },
+//     { src: '7', alt: 'Lottery ball number 7' },
+//     { src: '9', alt: 'Lottery ball number 9' },
+//   ],
+// }
 
 const WinSection = () => {
   const { t } = useTranslation()
@@ -96,12 +96,14 @@ const WinSection = () => {
 
   return (
     <>
-      <BgWrapper>
-        
-      </BgWrapper>
+      <BgWrapper />
+
       <TransparentFrame isDark={theme.isDark}>
         <Flex flexDirection="column" alignItems="center" justifyContent="center">
-          <ColoredWordHeading textAlign="center" text={t('All Products Revolves Around Shadow Token & Core in the Shadow Ecosystem')} />
+          <ColoredWordHeading
+            textAlign="center"
+            text={t('All Products Revolves Around Shadow Token & Core in the Shadow Ecosystem')}
+          />
           <Text color="textSubtle">{t('Provably fair, on-chain games.')}</Text>
           <Text mb="40px" color="textSubtle">
             {t('Win big with PancakeSwap.')}

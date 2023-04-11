@@ -33,7 +33,7 @@ const IfoQuestions = () => {
   return (
     <Flex alignItems={['center', null, null, 'start']} flexDirection={['column', null, null, 'row']}>
       <ImageWrapper>
-        <Image src="/images/ifos/ifo-bunny.png" alt="ifo bunny" width={414} height={500} />
+        <Image src="/images/ifos/Shadowswap_V3.gif" alt="ifo bunny" width={414} height={415} />
       </ImageWrapper>
       <DetailsWrapper>
         <Card>
