@@ -36,6 +36,7 @@ const config = {
   compiler: {
     styledComponents: true,
   },
+  distDir : "build",
   experimental: {
     scrollRestoration: true,
     transpilePackages: [

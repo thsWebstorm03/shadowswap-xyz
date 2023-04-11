@@ -8,11 +8,9 @@ const onCallbackIdList = {}
 export const listenOnBnMessage = () => {
   if (typeof window !== 'undefined') {
     window.bn.onMessage = ({ data: { id, payload, on } }) => {
-      console.log('~ onMessage: ', id, payload)
       let newPayload = payload
       if (typeof payload === 'string') {
         newPayload = JSON.parse(payload)
-        console.log('~ onMessage parse payload: ', payload)
       }
       if (on && typeof onCallbackIdList[on] === 'function') {
         onCallbackIdList[on](newPayload)

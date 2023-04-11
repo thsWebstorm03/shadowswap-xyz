@@ -6,7 +6,6 @@ import type { Theme } from './types'
 const getVarName = (_value: string | null, path: string[]) => path.join('-')
 const baseTokens: Omit<Theme, 'colors'> = tokens
 const baseVars = createGlobalThemeContract(baseTokens, getVarName)
-console.log(baseVars,'var')
 
 createGlobalTheme(':root', baseVars, baseTokens)
 

@@ -74,7 +74,6 @@ router.get('/:chainId', async ({ params }, event) => {
         },
       })
     } catch (e) {
-      console.log(e)
       return error(500, 'Fetch Farms error')
     }
   }
@@ -108,12 +107,10 @@ async function handleScheduled(event: ScheduledEvent) {
     case '*/1 * * * *':
     case '*/2 * * * *': {
       const result = await Promise.allSettled(farmFetcher.supportedChainId.map((id) => saveFarms(id, event)))
-      console.log(result.map((r) => r))
       return result
     }
     case '0 0 * * *': {
       const result = await Promise.allSettled(farmFetcher.supportedChainId.map((id) => saveLPsAPR(id)))
-      console.log(result.map((r) => r))
       return result
     }
     default:
